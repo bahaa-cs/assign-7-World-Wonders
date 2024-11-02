@@ -3,8 +3,12 @@ const instance = axios.create({baseURL: "https://www.world-wonders-api.org/v0/wo
 const fetchData = async () =>{
     const response = await instance.get();
     const data = response.data
-    console.log(data[0]);
+    return data;
 } 
 
-fetchData();
+const getData = fetchData().then( (data) =>{
+    const firstElement = data[0]
+    console.log(firstElement.name)
+})
+
 
