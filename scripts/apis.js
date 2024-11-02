@@ -34,18 +34,12 @@ fetchData().then( (data) =>{
     summary = arrayElement.summary
     time_period = arrayElement.time_period
 
-    console.log(build_year)
-    console.log(categories)
-    console.log(britannica)
-    console.log(google_maps)
-    console.log(images)
-    console.log(trip_advisor)
-    console.log(wiki)
-    console.log(location_text)
-    console.log(name_text)
-    console.log(summary)
-    console.log(time_period)
-
+    let containerSection = document.createElement("section")
+    containerSection.id = "container"
+    containerSection.textContent = `
+    ${build_year}
+    `
+    document.body.appendChild(containerSection)
     
 })
 

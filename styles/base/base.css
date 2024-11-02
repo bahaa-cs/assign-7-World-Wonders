@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Kumbh Sans";
+    src: url("./../../assets/fonts/Kumbh_Sans/static/KumbhSans-Regular.ttf");
+  }
+  
+@font-face {
+    font-family: "Kumbh Sans";
+    src: url("./../../assets/fonts/Kumbh_Sans/static/KumbhSans-Bold.ttf");
+    font-weight: bold;
+}
+
+body{
+    font-family: "Kumbh Sans";
+}
+
+.nav-bar{
+    width: 100%;
+    height: 70px;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
