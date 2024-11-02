@@ -6,7 +6,7 @@
 }
 
 .card{
-    overflow: hidden;
+    
     margin: 50px;
     gap: 5px;
     width: 313px;
@@ -27,6 +27,7 @@
 .card-txt{
     padding: 10px;
     gap: 10px;
+    overflow: hidden;
 }
 
 .location-txt{
@@ -38,6 +39,7 @@
 }
 
 .summary{
+    overflow: hidden;
     font-size: 16px;
 }
 

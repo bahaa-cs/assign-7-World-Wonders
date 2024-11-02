@@ -20,6 +20,9 @@ let time_period = null
 
 let arrayElement = []
 
+const cardContainer = document.getElementById("cards-container")
+
+
 fetchData().then( (data) =>{
     arrayElement = data[0]
     console.log(arrayElement)
@@ -35,13 +38,24 @@ fetchData().then( (data) =>{
     summary = arrayElement.summary
     time_period = arrayElement.time_period
 
-    let cardElement = document.createElement("div")
-    cardElement.id = "card"
-    cardElement.className = "card flex column offwhite-bg"
-    cardElement.textContent = `
-    ${images[0]}
+
+    cardContainer.innerHTML+=
     `
-    // document.getElementById("cards-container").appendChild(cardElement)
+        <div class="card flex column offwhite-bg">
+        <img class="card-image" src="${images[0]}" alt="">
+        <div class="card-txt flex column">
+            <p class="location-txt black-txt">${location_text}</p>
+            <h2 class="name-txt black-txt">${name_text}</h2>
+            <p class="summary black-txt">${summary}</p>
+        </div>
+        <div class="view-details secondary-bg flex row center">
+            <img class="view-details-icon" src="./assets/images/view-details.png" alt="">
+            <p class="view-details-txt">View Details</p>
+        </div>
+        </div>
+    `
+
+
     
 })
 
