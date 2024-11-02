@@ -26,7 +26,7 @@ let time_period = null;
 
 let arrayElement = [];
 
-const cardContainer = document.getElementById("cards-container");
+const cardContainer = document.getElementById("card-container-details");
 
 fetchData().then((data) => {
     
@@ -43,18 +43,18 @@ fetchData().then((data) => {
       summary = arrayElement.summary;
       time_period = arrayElement.time_period;
       cardContainer.innerHTML += ` 
-              <div class="card flex column offwhite-bg" cardID="${ID}">
-                  <img class="card-image" src="${images[0]}" alt="">
-                  <div class="card-txt flex column">
-                      <p class="location-txt black-txt">${location_text}</p>
-                      <h2 class="name-txt black-txt">${name_text}</h2>
-                      <p class="summary black-txt">${summary}</p> 
-                  </div> 
-                  <div class="view-details secondary-bg flex row center">
-                      <img class="view-details-icon" src="./assets/images/view-details.png" alt=""> 
-                      <p class="view-details-txt">View Details</p>
-                  </div> 
-              </div> 
+        <div class="images-details"><b>Images:</b><br>${images}</div>
+        <div class="location-txt-details"><b>Location:<b/><br>${location_text} </div>
+        <div class="name-txt-details"><b>${name_text}</b></div>
+        <div class="summary-details"><b>Summary:</b><br>${summary}</div>
+        <div class="wiki-details"><b>Wiki</b>:<br>${wiki}</div>
+        <div class="google-maps-details"><b>Google maps:</b><br>${google_maps}</div>
+        <div class="trip-advisor-details"><b>Trip Advisor:</b><br>${trip_advisor}</div>
+        <div class="britinicca-details"><b>Britinicca:</b><br>${britannica}</div>
+        <div class="categories-details"><b>Categories:</b><br>${categories}</div>
+        <div class="build-year-details"><b>Build year:</b><br>:${build_year}<br></div>
+        <div class="time-period"><b>Time period:</b><br>${time_period}</div>
+
           `;
       
     });
