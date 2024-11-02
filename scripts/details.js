@@ -43,17 +43,17 @@ fetchData().then((data) => {
       summary = arrayElement.summary;
       time_period = arrayElement.time_period;
       cardContainer.innerHTML += ` 
-        <div class="images-details"><b>Images:</b><br>${images}</div>
-        <div class="location-txt-details"><b>Location:<b/><br>${location_text} </div>
-        <div class="name-txt-details"><b>${name_text}</b></div>
-        <div class="summary-details"><b>Summary:</b><br>${summary}</div>
-        <div class="wiki-details"><b>Wiki</b>:<br>${wiki}</div>
-        <div class="google-maps-details"><b>Google maps:</b><br>${google_maps}</div>
-        <div class="trip-advisor-details"><b>Trip Advisor:</b><br>${trip_advisor}</div>
-        <div class="britinicca-details"><b>Britinicca:</b><br>${britannica}</div>
-        <div class="categories-details"><b>Categories:</b><br>${categories}</div>
-        <div class="build-year-details"><b>Build year:</b><br>:${build_year}<br></div>
-        <div class="time-period"><b>Time period:</b><br>${time_period}</div>
+        <div class="images-details"><img src="${images[1]}" alt=""></div>
+        <div class="name-txt-details">Name:<br>${name_text}</div>
+        <div class="location-txt-details">Location:<br>${location_text}</div>
+        <div class="summary-details">Summary:<br>${summary}</div>
+        <div class="wiki-details"><a href="${wiki}" target="_blank">Wiki</a></div>
+        <div class="google-maps-details"><br><a href="${google_maps}" target="_blank">Google Maps</a></div>
+        <div class="trip-advisor-details"><a href="${trip_advisor}" target="_blank">Trip Advisor</a></div>
+        <div class="britinicca-details"><a href="${britannica}" target="_blank">Britannica</a></div>
+        <div class="categories-details">Categories: <br>${categories}</div>
+        <div class="build-year-details">Build year:<br>${build_year}</div>
+        <div class="time-period">Time period:<br>${time_period}</div>
 
           `;
       
