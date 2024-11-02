@@ -52,8 +52,8 @@ fetchData().then((data) => {
       summary = arrayElement.summary;
       time_period = arrayElement.time_period;
       cardContainer.innerHTML += ` 
+        <div class="name-txt-details">${name_text}</div>
         <div class="images-details">${images_html}</div>
-        <div class="name-txt-details">Name:<br>${name_text}</div>
         <div class="location-txt-details">Location:<br>${location_text}</div>
         <div class="summary-details">Summary:<br>${summary}</div>
         <div class="wiki-details"><a href="${wiki}" target="_blank">Wiki</a></div>
