@@ -87,17 +87,17 @@
 
 .images-details{
     display: flex;
-    overflow-x: scroll;  
-    direction: row;
+    flex-direction: row;
+    overflow-x:scroll;
     gap: 5px;
-    overflow: hidden;
+    flex-wrap:wrap;
 }
 
 .card-container-details img{
     width: 250px;
     height: 250px;
     object-fit: cover;
-    
+    overflow-x: scroll;
 }
 
 .name-txt-details{
