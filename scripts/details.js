@@ -28,6 +28,9 @@ let arrayElement = [];
 
 const cardContainer = document.getElementById("card-container-details");
 
+
+
+
 fetchData().then((data) => {
     
       arrayElement = data[ID];
@@ -36,6 +39,12 @@ fetchData().then((data) => {
       britannica = arrayElement.links.britannica;
       google_maps = arrayElement.links.google_maps;
       images = arrayElement.links.images;
+
+      let images_html = ''
+      images.forEach(img => {
+        images_html+=`<img src='${img}' alt=''>`
+      });
+
       trip_advisor = arrayElement.links.trip_advisor;
       wiki = arrayElement.links.wiki;
       location_text = arrayElement.location;
@@ -43,7 +52,7 @@ fetchData().then((data) => {
       summary = arrayElement.summary;
       time_period = arrayElement.time_period;
       cardContainer.innerHTML += ` 
-        <div class="images-details"><img src="${images[1]}" alt=""></div>
+        <div class="images-details">${images_html}</div>
         <div class="name-txt-details">Name:<br>${name_text}</div>
         <div class="location-txt-details">Location:<br>${location_text}</div>
         <div class="summary-details">Summary:<br>${summary}</div>

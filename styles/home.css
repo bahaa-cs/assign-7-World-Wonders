@@ -78,14 +78,27 @@
     height: auto;
     justify-content: center;
     align-items: center;
+
 }
 
 .card-container-details div:hover{
     background-color: #f5f5f5;
 }
 
-.card-container-details img{
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
+
+
+.images-details{
+    display: flex;
+    overflow-x: scroll;  
+    direction: row;
+    gap: 5px;
+    overflow: hidden;
 }
+
+.card-container-details img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    
+}
+
