@@ -42,7 +42,7 @@ fetchData().then((data) => {
 
       let images_html = ''
       images.forEach(img => {
-        images_html+=`<img src='${img}' alt=''>`
+        images_html+=`<a href="${img}" target="_blank"><img src='${img}' alt=''></a>`
       });
 
       trip_advisor = arrayElement.links.trip_advisor;
