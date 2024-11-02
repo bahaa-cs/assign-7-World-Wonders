@@ -24,6 +24,9 @@ let arrayElement = [];
 
 const cardContainer = document.getElementById("cards-container");
 
+let cardElement = null
+let cardID = null
+
 fetchData().then((data) => {
   data.forEach((element, index) => {
     arrayElement = element;
@@ -39,7 +42,7 @@ fetchData().then((data) => {
     summary = arrayElement.summary;
     time_period = arrayElement.time_period;
     cardContainer.innerHTML += ` 
-            <div class="card flex column offwhite-bg" id="card-${index}">
+            <div class="card flex column offwhite-bg" cardID="${index}">
                 <img class="card-image" src="${images[0]}" alt="">
                 <div class="card-txt flex column">
                     <p class="location-txt black-txt">${location_text}</p>
@@ -48,9 +51,27 @@ fetchData().then((data) => {
                 </div> 
                 <div class="view-details secondary-bg flex row center">
                     <img class="view-details-icon" src="./assets/images/view-details.png" alt=""> 
-                    <p class="view-details-txt" id="view details">View Details</p>
+                    <p class="view-details-txt">View Details</p>
                 </div> 
             </div> 
         `;
+    
   });
+
+    const cardElements = document.querySelectorAll(".card")
+    cardElements.forEach((card) => {
+        const cardID = card.getAttribute("cardID");
+        console.log("Card ID:", cardID)
+
+        card.querySelector(".view-details").addEventListener("click", () => {
+        console.log("ID:", cardID)
+        // window.location.href = `cardDetails.html?id=${cardID}`
+        });
+    });
+
 });
+
+
+
+
+
