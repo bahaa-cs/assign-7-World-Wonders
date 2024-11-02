@@ -27,7 +27,6 @@ const cardContainer = document.getElementById("cards-container");
 fetchData().then((data) => {
   data.forEach((element, index) => {
     arrayElement = element;
-    console.log(index);
     build_year = arrayElement.build_year;
     categories = arrayElement.categories;
     britannica = arrayElement.links.britannica;
@@ -40,7 +39,7 @@ fetchData().then((data) => {
     summary = arrayElement.summary;
     time_period = arrayElement.time_period;
     cardContainer.innerHTML += ` 
-            <div class="card flex column offwhite-bg">
+            <div class="card flex column offwhite-bg" id="card-${index}">
                 <img class="card-image" src="${images[0]}" alt="">
                 <div class="card-txt flex column">
                     <p class="location-txt black-txt">${location_text}</p>
