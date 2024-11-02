@@ -22,6 +22,7 @@ let arrayElement = []
 
 fetchData().then( (data) =>{
     arrayElement = data[0]
+    console.log(arrayElement)
     build_year = arrayElement.build_year
     categories = arrayElement.categories
     britannica = arrayElement.links.britannica
@@ -36,9 +37,9 @@ fetchData().then( (data) =>{
 
     let cardElement = document.createElement("div")
     cardElement.id = "card"
-    cardElement.className = "card"
+    cardElement.className = "card flex column offwhite-bg"
     cardElement.textContent = `
-    ${build_year}
+    ${images[0]}
     `
     // document.getElementById("cards-container").appendChild(cardElement)
     
