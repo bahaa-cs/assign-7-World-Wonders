@@ -34,12 +34,13 @@ fetchData().then( (data) =>{
     summary = arrayElement.summary
     time_period = arrayElement.time_period
 
-    let containerSection = document.createElement("section")
-    containerSection.id = "container"
-    containerSection.textContent = `
+    let cardElement = document.createElement("div")
+    cardElement.id = "card"
+    cardElement.className = "card"
+    cardElement.textContent = `
     ${build_year}
     `
-    document.body.appendChild(containerSection)
+    // document.getElementById("cards-container").appendChild(cardElement)
     
 })
 

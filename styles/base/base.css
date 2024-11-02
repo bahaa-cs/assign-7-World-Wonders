@@ -17,13 +17,17 @@
 
 body{
     font-family: "Kumbh Sans";
+    
 }
 
 .nav-bar{
     width: 100%;
-    height: 70px;
+    height: 60px;
     font-size: 30px;
     font-weight: 400;
     letter-spacing: 2px;
     font-weight: bold;
 }
+
+
+
