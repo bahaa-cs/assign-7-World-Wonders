@@ -8,17 +8,10 @@ const fetchData = async () => {
   return data;
 };
 
-let build_year = null;
-let categories = [];
-let britannica = null;
-let google_maps = null;
 let images = [];
-let trip_advisor = null;
-let wiki = null;
 let location_text = null;
 let name_text = null;
 let summary = null;
-let time_period = null;
 
 let arrayElement = [];
 
@@ -30,17 +23,10 @@ let cardID = null
 fetchData().then((data) => {
   data.forEach((element, index) => {
     arrayElement = element;
-    build_year = arrayElement.build_year;
-    categories = arrayElement.categories;
-    britannica = arrayElement.links.britannica;
-    google_maps = arrayElement.links.google_maps;
     images = arrayElement.links.images;
-    trip_advisor = arrayElement.links.trip_advisor;
-    wiki = arrayElement.links.wiki;
     location_text = arrayElement.location;
     name_text = arrayElement.name;
     summary = arrayElement.summary;
-    time_period = arrayElement.time_period;
     cardContainer.innerHTML += ` 
             <div class="card flex column offwhite-bg" cardID="${index}">
                 <img class="card-image" src="${images[0]}" alt="">
@@ -60,12 +46,9 @@ fetchData().then((data) => {
 
     const cardElements = document.querySelectorAll(".card")
     cardElements.forEach((card) => {
-        const cardID = card.getAttribute("cardID");
-        console.log("Card ID:", cardID)
-
+        const cardID = card.getAttribute("cardID")
         card.querySelector(".view-details").addEventListener("click", () => {
-        console.log("ID:", cardID)
-        // window.location.href = `cardDetails.html?id=${cardID}`
+        window.location.href = `cardDetails.html?id=${cardID}`
         });
     });
 
